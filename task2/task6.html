@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <H1>Open the console to find the output.</H1>
+
+
+
+    <script>
+        console.log("task '1'")
+        let age = 31;
+        let age1 = 25;
+        let age2 = 16;
+        let age3= 65;
+
+        if (age > 30){
+            console.log("“You are not eligible. You may join other programs.”")
+        };
+        if (age1 < 30 && age1 > 18) {
+
+            console.log(": “You are eligible. Start your application.”")
+        };
+        if (age2 < 18){
+            console.log("“You may join the kids' program.”")
+        };
+        if (age3 > 60){
+            console.log("“You may join the seniors’ program.”")
+        };
+        //
+        
+        function calculateAge(yearOfBirth) {
+        let currentYear = new Date().getFullYear();
+        let age = currentYear - yearOfBirth;
+
+        if (age < 20) {
+         return "2025";
+        } else if (age === 22) {
+         return "2002";
+         } else {
+         return `my age ${age}`;
+         }
+        }
+        let yearOfBirth = 2002;
+        console.log(calculateAge(yearOfBirth));
+        //
+        console.log("task '2'")
+        function switchCase(str) {
+        return str.split("").map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join("");
+        }
+        console.log(switchCase("OrAnGe")); 
+       
+        //
+        console.log("task '3'")
+        let arr = ["Coding", "Academy", "By", "Orange"]
+        function toCamelCase(str) {
+        return str
+        .split(" ")  
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1)) 
+        .join(""); 
+        }
+
+         console.log(toCamelCase("Coding Academy by Orange"));  
+        //
+        console.log("task '4'")
+        function removeElement(arr, element) {
+        return arr.filter(item => item !== element);
+        }
+
+        console.log(removeElement(["Coding", "Academy", "By", "Orange"],"By"));
+        //
+         console.log("task '5'")
+        let num = 7;
+        function number(num){
+            if (num % 2 == 0){
+                console.log("The number is even .")
+            }else {
+                console.log("The number is odd .")
+            }
+        }
+        console.log(number(num));
+        //
+       console.log("task '6'")
+        function Number(input) {
+        return typeof input === "number";
+        }   
+        let variable = 42;
+        console.log(Number(variable));
+        let variable2 = "Hello";
+        console.log(Number(variable2));
+
+        //
+        console.log("task '7'")
+
+        function largestNumber (number1,number2){
+        return `the largest number is ${Math.max(number1,number2)}`
+        }
+        console.log(largestNumber(25,10));
+    </script>
+</body>
+</html>
